@@ -45,6 +45,18 @@ services:
       - 9100
     networks:
       - back-tier
+
+  graphite-exporter:
+    container_name: graphite-exporter
+    image: prom/graphite-exporter
+    volumes:
+        - ./graphite-exporter/:/etc/graphite-exporter/
+    command: '-graphite.mapping-config=/etc/graphite-exporter/graphite_mapping.conf'
+    expose:
+      - 9108
+    networks:
+      - back-tier
+
   alertmanager:
     image: prom/alertmanager
     ports:
