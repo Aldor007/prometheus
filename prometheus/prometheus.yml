@@ -41,3 +41,4 @@ scrape_configs:
              - 'localhost:9090'
              - 'graphite-exporter:9108'
              - '10.8.0.54:9145' # TODO: DNS name
+             - '10.8.0.10:9145' # TODO: DNS name
