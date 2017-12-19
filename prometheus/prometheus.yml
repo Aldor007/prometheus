@@ -30,6 +30,5 @@ scrape_configs:
     static_configs:
          - targets:
              - 'localhost:9090'
-             - 'node-exporter:9100'
              - 'graphite-exporter:9108'
              - '10.8.0.54:9145' # TODO: DNS name
