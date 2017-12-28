@@ -38,7 +38,7 @@ services:
       image: prom/graphite-exporter
       volumes:
           - ./graphite-exporter/:/etc/graphite-exporter/
-      command: '-graphite.mapping-config=/etc/graphite-exporter/graphite_mapping.conf -graphite.sample-expiry 1h'
+      command: '-graphite.mapping-strict-match -graphite.mapping-config=/etc/graphite-exporter/graphite_mapping.conf -graphite.sample-expiry 3h'
       ports:
           - "10.8.0.10:2003:9109"
       expose:
